@@ -36,7 +36,7 @@ jobs:
           test -f Salati/app/build.gradle.kts
       - name: Print PrayerTimeCalculator source
         run: |
-          cat Salati/app/src/main/java/com/salati/app/PrayerTimeCalculator.kt
+          cat Salati/app/src/main/java/com/salati/app/domain/PrayerTimeCalculator.kt
       - name: Build APK
         working-directory: Salati
         run: gradle --no-daemon assembleDebug
