@@ -1,5 +1,8 @@
 
 name: Build SALATI APK
+      - name: Print PrayerTimeCalculator source
+        run: |
+          cat Salati/app/src/main/java/com/salati/app/PrayerTimeCalculator.kt
 
 on:
   workflow_dispatch:
