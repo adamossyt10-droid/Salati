@@ -1,8 +1,5 @@
 
 name: Build SALATI APK
-      - name: Print PrayerTimeCalculator source
-        run: |
-          cat Salati/app/src/main/java/com/salati/app/PrayerTimeCalculator.kt
 
 on:
   workflow_dispatch:
@@ -37,7 +34,9 @@ jobs:
           unzip -o SALATI-Android-Project.zip -d .
           test -f Salati/settings.gradle.kts
           test -f Salati/app/build.gradle.kts
-
+      - name: Print PrayerTimeCalculator source
+        run: |
+          cat Salati/app/src/main/java/com/salati/app/PrayerTimeCalculator.kt
       - name: Build APK
         working-directory: Salati
         run: gradle --no-daemon assembleDebug
